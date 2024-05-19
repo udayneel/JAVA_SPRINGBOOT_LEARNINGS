@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<h3>Student Registration Form</h3>
+
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
+
+    First name: <input type="text" th:field="*{firstName}" />
+
+    <br><br>
+
+    Last name: <input type="text" th:field="*{lastName}" />
+
+    <br><br>
+
+    Country:
+
+<!--    <select th:field="*{country}">
+        <option th:value="Brazil">BRAZIL</option>
+        <option th:value="INDIA">INDIA</option>
+        <option th:value="IRELAND">IRELAND</option>
+        <option th:value="USA">USA</option>
+
+    </select>-->
+
+    <select th:field="*{country}">
+        <option th:each="tempcountry:${countries}"
+                th:value="${tempcountry}"
+                th:text="${tempcountry}">
+        </option>
+    </select>
+
+    <br><br>
+
+    Favrite Programming language:
+    <input type="radio" th:field="*{favlanguage}"
+    th:each="templang:${languages}"
+    th:value="${templang}"
+    th:text="${templang}"/>
+<!--
+    <input type="radio" th:field="*{favlanguage}" th:value="GO">GO</input>
+    <input type="radio" th:field="*{favlanguage}" th:value="JAVA">JAVA</input>
+    <input type="radio" th:field="*{favlanguage}" th:value="PYTHON">PYTHON</input>
+-->
+
+    <br><br>
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+
+
+</body>
+</html>
