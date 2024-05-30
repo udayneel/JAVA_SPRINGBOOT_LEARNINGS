@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:padding-left="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>First Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .left-align {
+            float: left;
+        }
+        .right-align {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="left-align">
+<!--                <a class="nav-link active" aria-current="true" href="#">Active</a>-->
+                <a href="/showNewUserForm" class='btn btn-success pull-right'>Add New User</a>
+            </li>
+
+            <ul> </ul>
+            <ul class="right-align">
+            <a href="/" class='btn btn-success pull-right'>List All User</a>
+            </ul>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--
+<div class="container mt-5">
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <a href="/showNewUserForm" class='btn btn-success pull-right'>Add New User</a>
+        <a href="/" class='btn btn-success pull-right'>List All User</a>
+    </div>
+</div>
+</div>
+-->
+
+</body>
+</html>
